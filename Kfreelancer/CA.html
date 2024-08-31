@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobpilot - Create Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="script.js">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .create-account-header {
+        font-family: "Manrope", sans-serif;
+        font-size: 30px;
+  font-style: normal;
+      text-align: center;
+    }
+
+    .create-account-as {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .create-account-as button {
+      padding: 10px 20px;
+      background-color:#21344B;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+      
+    }
+
+    .create-account-as button:hover {
+      background-color: #0069d9;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group input[type="password"] {
+      margin-bottom: 20px;
+    }
+
+    .terms-of-service {
+      margin-bottom: 20px;
+    }
+
+    .terms-of-service input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .create-account-button {
+      background-color:#4F6C90;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .create-account-button:hover {
+      background-color:black;
+    }
+
+    .or {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: center;
+    }
+
+    .social-login button {
+      padding: 10px 20px;
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    .social-login button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .background-image {
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0.5; /* Adjust opacity as needed */
+    }
+
+    .stats {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
+    }
+
+    .stats h2 {
+      margin-bottom: 20px;
+    }
+
+    .stats .stat {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .stat img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+    .d1{
+        height: 90px;
+        width: 350px;
+        border: #ccc;
+        /* background-color:#E2EAF4; */
+        color: slategray;
+        border-radius: 4px;
+        text-align: center;
+    }
+    .a1.container.d1.p{
+        margin-top: 1px;
+    }
+
+/* Mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 300px;
+    padding: 15px;
+  }
+  .create-account-header {
+    font-size: 24px;
+  }
+  .create-account-as button {
+    padding: 8px 15px;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    padding: 8px;
+  }
+  .create-account-button {
+    padding: 8px 15px;
+  }
+  .social-login button {
+    padding: 8px 15px;
+  }
+  .d1 {
+    height: 70px;
+    width: 250px;
+  }
+}
+
+/* Tablet devices (min-width: 481px and max-width: 768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 400px;
+    padding: 20px;
+  }
+  .create-account-header {
+    font-size: 28px;
+  }
+  .create-account-as button {
+    padding: 10px 20px;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    padding: 10px;
+  }
+  .create-account-button {
+    padding: 10px 20px;
+  }
+  .social-login button {
+    padding: 10px 20px;
+  }
+  .d1 {
+    height: 80px;
+    width: 300px;
+  }
+}
+
+/* Desktop devices (min-width: 769px) */
+@media only screen and (min-width: 769px) {
+  .container {
+    max-width: 600px;
+    padding: 25px;
+  }
+  .create-account-header {
+    font-size: 32px;
+  }
+  .create-account-as button {
+    padding: 12px 25px;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    padding: 12px;
+  }
+  .create-account-button {
+    padding: 12px 25px;
+  }
+  .social-login button {
+    padding: 12px 25px;
+  }
+  .d1 {
+    height: 90px;
+    width: 350px;
+  }
+}
+
+/* Large desktop devices (min-width: 1200px) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 800px;
+    padding: 30px;
+  }
+  .create-account-header {
+    font-size: 36px;
+  }
+  .create-account-as button {
+    padding: 15px 30px;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    padding: 15px;
+  }
+  .create-account-button {
+    padding: 15px 30px;
+  }
+  .social-login button {
+    padding: 15px 30px;
+  }
+  .d1 {
+    height: 100px;
+    width: 400px;
+  }
+}
+    
+  </style>
+</head>
+<body>
+    <div class="c2">
+
+
+    <div class="a1">
+
+
+  <div class="background-image"></div>
+  <div class="container">
+
+    <div class="logo"></div>
+    <div class="create-account-header">
+      Create account.
+    </div>
+    <p>Already have account? <a href="#">Log in</a></p>
+
+    <div class="d1">
+    <p>Create account as </p>
+    
+    <div class="create-account-as">
+       
+      <button>Candidate</button>
+      <button>Employers</button>
+    </div>
+</div>
+    <form>
+      <div class="form-group">
+        <label for="full-name"></label>
+        <input type="text" id="full-name" name="full-name" placeholder="Full name">
+      </div>
+      <div class="form-group">
+        <label for="username"></label>
+        <input type="text" id="username" name="username" placeholder="Username">
+      </div>
+      <div class="form-group">
+        <label for="email-address"></label>
+        <input type="email" id="email-address" name="email-address" placeholder="Email address">
+      </div>
+      <div class="form-group">
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password"></label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm-password">
+      </div>
+      <div class="terms-of-service">
+        <input type="checkbox" id="terms-of-service" name="terms-of-service">
+        <label for="terms-of-service">I've read and agree with your <a href="#">Terms of Services</a></label>
+      </div>
+      <button class="create-account-button">Create Account</button>
+    </form>
+    <div class="or">OR</div>
+    <div class="social-login">
+      <button> Sign up with Facebook</button>
+      <button>Sign up with Google</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="a2">
+</div>
+</div>
+</body>
+</html>

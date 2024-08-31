@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-family: "Manrope", sans-serif;
+
+  font-optical-sizing: auto;
+  font-style: normal;
+      text-align: center;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.show-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #337ab7;
+    float: right;
+}
+
+.btn {
+    width: 200px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn i {
+    margin-left: 5px;
+}
+
+.or {
+    margin: 20px 0;
+    color: #999;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-buttons button {
+    flex: 1;
+    margin: 0 5px;
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.social-buttons button i {
+    margin-right: 5px;
+}
+.w1{
+    display:flex;
+justify-content: space-between;
+width:100%;
+}
+.form-group.remember-forget1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+/* Desktop screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    width: 50%;
+  }
+  .social-buttons {
+    justify-content: space-around;
+  }
+}
+
+/* Tablet screens (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+  .social-buttons {
+    justify-content: space-between;
+  }
+}
+
+/* Mobile screens (max-width: 600px) */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+  .social-buttons {
+    flex-direction: column;
+  }
+  .social-buttons button {
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile screens (max-width: 400px) */
+@media (max-width: 400px) {
+  .container {
+    padding: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Add Font Awesome icons if using */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+    </style>
+
+ 
+</head>
+<body>
+    <div class="container">
+        <h1>Sign in</h1>
+        <p>Don't have account <a href="#">Create Account</a></p>
+
+        <form>
+            <div class="form-group">
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="email-address">
+            </div>
+
+            <div class="form-group">
+                <div class="remember-forget1">
+                <label for="password"></label>
+                <input type="password" id="password" name="password" required placeholder="password">
+                <span class="show-password">
+                    <i class="fa fa-eye"></i>
+                </span>
+            </div>
+            </div>
+           
+            <div class="form-group">              
+                <label><input type="checkbox">Remember Me</label> 
+                <a href="#" class="forgot-password">Forget password</a>
+            </div>
+       
+            <button type="submit" class="btn">Sign In <i class="fa fa-arrow-right"></i></button>
+
+            <p class="or">or</p>
+
+            <div class="social-buttons">
+                <button type="button" class="btn facebook"><i class="fa fa-facebook"></i> Sign in with Facebook</button>
+                <button type="button" class="btn google"><i class="fa fa-google"></i> Sign in with Google</button>
+            </div>
+        </form>
+    </div>
+   
+</body>
+</html>
